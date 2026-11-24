@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Style Vault — Christmas Tier Catalog</title>
-<meta name="description" content="Factory-direct fashion by price tier. Four albums: $30, $50, $100, $300.">
+<title>Style Vault — Christmas Gift Pool Catalog</title>
+<meta name="description" content="Factory-direct fashion by gift pool. Four pools: $30, $60, $120, $300.">
 <meta name="theme-color" content="#06130D">
 <style>
 :root{
@@ -47,9 +47,8 @@ background:linear-gradient(140deg,var(--gold2),var(--goldD));color:#12200F;box-s
 .nav{display:flex;align-items:center;gap:8px}
 .nav a{color:var(--muted);text-decoration:none;font-size:13px;padding:8px 12px;border-radius:10px;transition:.2s}
 .nav a:hover{color:var(--gold2);background:rgba(227,185,100,.08)}
-.wa-pill{display:inline-flex;align-items:center;gap:7px;padding:9px 15px;border-radius:999px;font-size:12.5px;font-weight:700;text-decoration:none;
-color:#06210F;background:linear-gradient(140deg,#4FE08C,#1FAE63);box-shadow:0 8px 22px rgba(31,174,99,.28);transition:.2s}
-.wa-pill:hover{transform:translateY(-1px);box-shadow:0 12px 28px rgba(31,174,99,.36)}.hero{position:relative;padding:172px 0 34px}
+
+.hero{position:relative;padding:172px 0 34px}
 .eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:10.5px;letter-spacing:.30em;text-transform:uppercase;color:var(--gold);font-weight:700}
 .eyebrow::before{content:"";width:26px;height:1px;background:linear-gradient(90deg,transparent,var(--gold))}
 .hero h1{font-family:var(--serif);font-weight:400;font-size:clamp(34px,5.6vw,60px);line-height:1.04;letter-spacing:-.02em;margin:16px 0 0}
@@ -102,8 +101,8 @@ border:1px solid rgba(227,185,100,.28);background:rgba(227,185,100,.07)}
 .ft-in{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;font-size:11.5px;color:var(--muted)}
 .ft a{color:var(--gold);text-decoration:none}
 .ft a:hover{text-decoration:underline}.sh{position:fixed;inset:0;z-index:80;display:grid;place-items:center;padding:20px;
-background:rgba(3,10,7,.74);backdrop-filter:blur(9px);opacity:0;visibility:hidden;transition:.28s}
-.sh.on{opacity:1;visibility:visible}
+background:rgba(3,10,7,.74);backdrop-filter:blur(9px);opacity:0;visibility:hidden;transition:opacity .28s ease,visibility 0s linear .28s}
+.sh.on{opacity:1;visibility:visible;transition:opacity .28s ease,visibility 0s linear 0s}
 .sheet{position:relative;width:min(440px,100%);border-radius:20px;padding:26px 24px 24px;
 border:1px solid rgba(227,185,100,.35);background:linear-gradient(168deg,#123528,#081A12);
 box-shadow:0 34px 90px rgba(0,0,0,.62);transform:translateY(14px) scale(.98);
@@ -152,7 +151,6 @@ display:grid;place-items:center;font-size:26px}
 .sec-head{flex-direction:column;align-items:flex-start;gap:6px}
 }
 @media(max-width:520px){
-.nav a:not(.wa-pill){display:none}
 .price b{font-size:44px}
 .hero h1{font-size:31px}
 .tier{padding:22px 20px 18px}
@@ -215,7 +213,7 @@ background:var(--redL);margin-right:7px;vertical-align:1px;box-shadow:0 0 8px rg
 <div class="load-in">
 <div class="ring">🎄</div>
 <div class="load-t">Merry Christmas</div>
-<div class="load-s">Style Vault · Tier Catalog</div>
+<div class="load-s">Style Vault · Gift Pool Catalog</div>
 </div>
 </div>
 <div class="sky" aria-hidden="true">
@@ -228,37 +226,37 @@ background:var(--redL);margin-right:7px;vertical-align:1px;box-shadow:0 0 8px rg
 <div class="hdr-in">
 <a class="brand" href="#top">
 <span class="mark">SV</span>
-<span class="brand-txt"><b>Style Vault</b><span>Christmas Tier Catalog</span></span>
+<span class="brand-txt"><b>Style Vault</b><span>Christmas Gift Pool Catalog</span></span>
 </a>
 <nav class="nav">
-<a href="#tiers">Tiers</a>
+<a href="#tiers">Gift Pools</a>
 <a href="#about">About Us</a>
-<a class="wa-pill" id="topWa" href="#" target="_blank" rel="noopener">💬 WhatsApp</a>
+<a class="nav-track" href="https://t.17track.net/zh-cn#nums=" target="_blank" rel="noopener" aria-label="Track your order with 17TRACK"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="1.6" y="7.4" width="12.6" height="10.6" rx="1.6" fill="#12352A"/><path d="M14.6 10.2h4.1c.7 0 1.3.45 1.55 1.1l1.35 3.7v2.9h-7z" fill="#12352A"/><path d="M16.4 11.8h2.3l.9 2.9h-3.2z" fill="#F3D9A2" opacity=".75"/><rect x="3.2" y="9.4" width="9.4" height="1.5" rx=".75" fill="#F3D9A2"/><rect x="3.2" y="12.2" width="6.6" height="1.5" rx=".75" fill="#F3D9A2"/><circle cx="6.4" cy="19.4" r="3" fill="#12352A"/><circle cx="6.4" cy="19.4" r="1.15" fill="#F3D9A2"/><circle cx="18.9" cy="19.4" r="3" fill="#12352A"/><circle cx="18.9" cy="19.4" r="1.15" fill="#F3D9A2"/></svg>Track order</a>
 </nav>
 </div>
 </header><main id="top" class="wrap">
 <section class="hero rise">
 <div class="seal" aria-hidden="true"><div><div class="s-mon">SV</div><div class="s-sub">Factory Direct</div><div class="s-sub">Est. 2026</div></div></div>
-<div class="eyebrow">Merry Christmas · Tier Catalog 2026</div>
-<h1>Shop the vault<br>by <em>price tier</em></h1>
-<p>Spend more, pick better. Every order unlocks a pick-any pool: spend $50-$100 and pick anything from the $30+ pool, up to $501-$1000 for the $300+ pool. Open the pool you qualify for below.</p>
+<div class="eyebrow">Merry Christmas · Gift Pool Catalog 2026</div>
+<h1>Open the vault<br>choose your <em>gift</em></h1>
+<p>Welcome to Style Vault. Shop as you like — every order unlocks a gift pool, and you pick the piece you love.</p>
 <div class="chips" id="chips"></div>
 </section>
 <section class="sec" id="tiers">
 <div class="sec-head">
-<h2>Choose your tier</h2>
-<span>04 albums · updated weekly</span>
+<h2>Choose your gift pool</h2>
+<span>4 gift pools · updated daily</span>
 </div>
 <div class="grid" id="grid"></div>
 </section>
 <section class="sec" id="about">
 <div class="sec-head">
 <h2>Why shop the vault</h2>
-<span>Direct from workshop</span>
+<span>The Style Vault promise</span>
 </div>
 <div class="trust">
 <div class="tr"><div class="ic">🏭</div><div><b>Factory direct</b><span>No middlemen — we ship from the workshop floor.</span></div></div>
-<div class="tr"><div class="ic">🧾</div><div><b>Price you see is per piece</b><span>Each tier is a spend range, not a bundle.</span></div></div>
+<div class="tr"><div class="ic">🎁</div><div><b>Pick-any pool, not a bundle</b><span>Spend unlocks a pick-any pool — you choose the one item above the min value.</span></div></div>
 <div class="tr"><div class="ic">✈️</div><div><b>Worldwide shipping</b><span>Tracked parcels, 7–14 days to most countries.</span></div></div>
 </div>
 </section>
@@ -266,46 +264,42 @@ background:var(--redL);margin-right:7px;vertical-align:1px;box-shadow:0 0 8px rg
 <div class="wrap">
 <div class="ft-in">
 <span>© 2026 Style Vault · Factory Direct · Merry Christmas &amp; Happy New Year</span>
-<span><a id="ftWa" href="#" target="_blank" rel="noopener">WhatsApp</a> · <a href="#top">Back to top</a></span>
+<span><a class="ft-track" href="https://t.17track.net/zh-cn#nums=" target="_blank" rel="noopener">Track order</a> · <a href="#top">Back to top</a></span>
 </div>
 </div>
 </footer>
 <div class="sh" id="sh">
 <div class="sheet" role="dialog" aria-modal="true">
 <button class="x" id="shX" aria-label="Close">✕</button>
-<div class="s-lab" id="shLab">Tier 01</div>
+<div class="s-lab" id="shLab">Pool 01</div>
 <div class="s-price" id="shPrice">$30</div>
 <div class="s-name" id="shName">Everyday Picks</div>
 <div class="s-desc" id="shDesc"></div>
 <div class="s-note" id="shNote"></div>
-<button class="k-btn" id="shGo"><span>Browse album</span><span class="arw">↗</span></button>
-<a class="k-wa" id="shWa" href="#" target="_blank" rel="noopener">💬 Order via WhatsApp</a>
+<button class="k-btn" id="shGo"><span>Open Gift Pool</span><span class="arw">↗</span></button>
 </div>
 </div><script>
-/* EDIT ONLY THIS BLOCK: album link and password for each pool.
-   url = album address; leave pw as '' when the album needs no password. */
+/* EDIT ONLY THIS BLOCK: gift pool link and password for each pool.
+   url = gift pool address; leave pw as '' when the pool needs no password. */
 var D = '\u0024';
-var WHATSAPP = '8617681555093';
 var TIERS = [
-{lab:'Tier 01',min:50,max:100,gift:30,name:D+'30 Pick-Any Pool',orn:'🎄',
+{lab:'Pool 01',min:50,max:100,gift:30,name:D+'30 Pick-Any Pool',orn:'🎄',
  desc:'Small orders still earn a pick - tees, caps, belts and everyday accessories.',
  list:['Tees & basics','Caps, belts, socks','Everyday accessories'],
- url:'',pw:'',msg:'Hi, I want the 30 pick-any pool (spend 50-100). Please send me the album.'},
-{lab:'Tier 02',min:101,max:300,gift:60,name:D+'60 Pick-Any Pool',orn:'🧦',
+ url:'',pw:''},
+{lab:'Pool 02',min:101,max:300,gift:60,name:D+'60 Pick-Any Pool',orn:'🧦',
  desc:'Mid orders unlock better wardrobe pieces - hoodies, joggers and knitwear.',
  list:['Hoodies & sweatshirts','Joggers & cargo','Knitwear & light jackets'],
- url:'',pw:'',msg:'Hi, I want the 60 pick-any pool (spend 101-300). Please send me the album.'},
-{lab:'Tier 03',min:301,max:500,gift:120,name:D+'120 Pick-Any Pool',orn:'🎁',
+ url:'',pw:''},
+{lab:'Pool 03',min:301,max:500,gift:120,name:D+'120 Pick-Any Pool',orn:'🎁',
  desc:'Bigger baskets unlock bags, outerwear and premium fabrics.',
  list:['Designer-look bags','Light outerwear','Premium knitwear'],
- url:'',pw:'',msg:'Hi, I want the 120 pick-any pool (spend 301-500). Please send me the album.'},
-{lab:'Tier 04',min:501,max:1000,gift:300,name:D+'300 Pick-Any Pool',orn:'🔔',
+ url:'',pw:''},
+{lab:'Pool 04',min:501,max:1000,gift:300,name:D+'300 Pick-Any Pool',orn:'🔔',
  desc:'Top orders unlock our best work - watches, top bags and statement pieces.',
  list:['Luxury watches','Top-tier bags','Statement outerwear'],
- url:'',pw:'',msg:'Hi, I want the 300 pick-any pool (spend 501-1000). Please send me the album.'}
+ url:'',pw:''}
 ];
-var waBase = 'https://wa.me/' + WHATSAPP + '?text=';
-function waLink(t){ return waBase + encodeURIComponent(t); }
 var grid = document.getElementById('grid');
 var chips = document.getElementById('chips');
 TIERS.forEach(function(t,i){
@@ -322,8 +316,8 @@ el.innerHTML =
 +'<div class="t-name">'+t.name+'</div>'
 +'<div class="t-desc">'+t.desc+'</div>'
 +'<ul class="t-list">'+t.list.map(function(x){return '<li>'+x+'</li>';}).join('')+'</ul>'
-+'<button class="go" data-i="'+i+'"><span>Open '+D+t.gift+' pool</span><span class="arw">→</span></button>'
-+'<a class="t-alt" href="'+waLink(t.msg)+'" target="_blank" rel="noopener">Ask about this tier on WhatsApp</a>';
++'<button class="go" data-i="'+i+'"><span>Gift Pool</span><span class="arw">→</span></button>'
+;
 grid.appendChild(el);
 var ch = document.createElement('a');
 ch.className = 'chip';
@@ -337,8 +331,6 @@ var b = e.target.closest('.go');
 if(!b) return;
 openSh(parseInt(b.getAttribute('data-i'),10));
 });
-document.getElementById('topWa').href = waLink('Hi, I would like to know how the pick-any pool works.');
-document.getElementById('ftWa').href = waLink('Hi, I would like to know how the pick-any pool works.');
 var sh = document.getElementById('sh');
 function openSh(i){
 var t = TIERS[i];
@@ -346,20 +338,20 @@ document.getElementById('shLab').textContent = t.lab.toUpperCase();
 document.getElementById('shPrice').textContent = D + t.gift + '+';
 document.getElementById('shName').textContent = t.name;
 document.getElementById('shDesc').textContent = 'Spend ' + D + t.min + '-' + D + t.max + ' on your order, then pick any item valued from ' + D + t.gift + ' upward in this pool.';
-document.getElementById('shWa').href = waLink(t.msg);
+
 var go = document.getElementById('shGo');
 var note = document.getElementById('shNote');
 if(!t.url){
-note.innerHTML = 'Album link is being prepared. Tap below and we will send the ' + D + t.gift + ' pool album on WhatsApp right away.';
-go.innerHTML = '<span>Ask for the pool</span><span class="badge">' + D + t.gift + '+</span>';
-go.onclick = function(){ window.open(waLink(t.msg),'_blank'); };
+note.innerHTML = 'The ' + D + t.gift + ' gift pool is updated daily.';
+go.innerHTML = '<span>Gift Pool</span><span class="badge">' + D + t.gift + '+</span>';
+go.onclick = function(){ toast('Gift pool is updated daily — the new link opens soon'); };
 }else if(t.pw){
 note.innerHTML = 'Password <b>' + t.pw + '</b> is copied when you tap the button. Paste it on Yupoo to unlock.';
-go.innerHTML = '<span>Open the pool</span><span class="badge">PW: ' + t.pw + '</span>';
+go.innerHTML = '<span>Gift Pool</span><span class="badge">PW: ' + t.pw + '</span>';
 go.onclick = function(){ copyText(t.pw); setTimeout(function(){ window.open(t.url,'_blank'); },150); };
 }else{
-note.innerHTML = 'No password needed. Tap to open the pool album directly.';
-go.innerHTML = '<span>Open the pool</span><span class="badge">OPEN</span>';
+note.innerHTML = 'No password needed. Tap to open the gift pool directly.';
+go.innerHTML = '<span>Gift Pool</span><span class="badge">OPEN</span>';
 go.onclick = function(){ window.open(t.url,'_blank'); };
 }
 sh.classList.add('on');
@@ -453,5 +445,18 @@ function drop(){
 setInterval(drop,900);
 drop();
 })();
-</script></body>
+</script><style>
+.toast{position:fixed;left:50%;bottom:44px;transform:translate(-50%,16px);background:rgba(8,24,16,.94);border:1px solid rgba(227,185,100,.5);color:#F6E9CE;font:13px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif;padding:11px 20px;border-radius:999px;opacity:0;pointer-events:none;transition:opacity .25s,transform .25s;z-index:90;box-shadow:0 10px 30px rgba(0,0,0,.45)}
+.toast.on{opacity:1;transform:translate(-50%,0)}
+</style>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script>
+function toast(msg){var el=document.getElementById('toast');if(!el)return;el.textContent=msg;el.classList.add('on');clearTimeout(window.__toastT);window.__toastT=setTimeout(function(){el.classList.remove('on');},2400);}
+</script><style>
+.nav .nav-track{display:inline-flex;align-items:center;gap:7px;padding:8px 13px;border-radius:999px;background:linear-gradient(140deg,#F3D9A2,#D2A056);border:1px solid rgba(255,246,230,.5);color:#12352A;font-size:12px;font-weight:800;letter-spacing:.02em;box-shadow:0 8px 20px rgba(0,0,0,.35),0 0 0 3px rgba(227,185,100,.08);transition:.2s}
+.nav .nav-track:hover{transform:translateY(-1px);border-color:rgba(255,246,230,.95);color:#0B2A21;background:linear-gradient(140deg,#FFEFCB,#E2B56A);box-shadow:0 12px 26px rgba(0,0,0,.45),0 0 22px rgba(227,185,100,.38)}
+.nav .nav-track svg{width:18px;height:18px;display:block}
+.ft-track{color:var(--gold2)}
+@media(max-width:430px){.nav a:not(.nav-track){display:none}}
+</style></body>
 </html>
