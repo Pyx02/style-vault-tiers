@@ -202,8 +202,8 @@ background:var(--redL);margin-right:7px;vertical-align:1px;box-shadow:0 0 8px rg
 .go:hover{background:linear-gradient(135deg,rgba(227,185,100,.30),rgba(194,57,56,.18))}
 .tier{border-color:rgba(227,185,100,.30)}
 .tier:hover{border-color:rgba(245,221,168,.6);box-shadow:0 28px 62px rgba(0,0,0,.5),0 0 34px rgba(227,185,100,.10)}
-.sleigh{position:absolute;top:54px;left:0;right:0;height:164px;overflow:hidden;pointer-events:none;z-index:1}
-.rig{position:absolute;top:0;left:-28%;width:clamp(232px,25.5vw,344px);animation:fly 32s linear infinite;animation-delay:.4s}
+.sleigh{position:fixed;top:54px;left:0;right:0;height:164px;overflow:hidden;pointer-events:none;z-index:24}
+.rig{position:absolute;top:0;left:-28%;width:clamp(232px,25.5vw,344px);animation:fly 28s linear infinite;animation-delay:.4s}
 .flip{transform:scaleX(-1)}
 .sl{display:block;width:100%;height:auto;animation:bob 4.4s ease-in-out infinite;filter:brightness(1.06) saturate(1.16) contrast(1.04) drop-shadow(0 14px 24px rgba(0,0,0,.55))}
 @keyframes fly{0%{left:-28%}100%{left:100%}}
@@ -416,5 +416,42 @@ setTimeout(function(){ if(l.parentNode) l.parentNode.removeChild(l); }, 1000);
 window.addEventListener('load', function(){ setTimeout(hideLoad, 380); });
 setTimeout(hideLoad, 3200);
 </script>
-</body>
+<style>
+.gifts{position:fixed;inset:0;pointer-events:none;z-index:23;overflow:hidden}
+.drop{position:fixed;transform-origin:50% 50%;animation-name:dropfall;animation-timing-function:linear;animation-fill-mode:both;filter:drop-shadow(0 5px 8px rgba(0,0,0,.4))}
+.drop svg{display:block;width:100%;height:auto}
+@keyframes dropfall{0%{transform:translate3d(0,0,0) rotate(0deg);opacity:0}
+12%{opacity:1}
+85%{opacity:1}
+100%{transform:translate3d(var(--sway,0px),88vh,0) rotate(var(--rot,20deg));opacity:0}}
+</style><div class="gifts" id="gifts" aria-hidden="true"></div><script>
+(function(){
+var G=document.getElementById('gifts'),R=document.querySelector('.rig');
+if(!G||!R)return;
+var ICON=[
+'<svg viewBox="0 0 24 24"><rect x="4" y="9" width="16" height="12" rx="1.5" fill="#C4312E"/><rect x="3" y="6" width="18" height="5" rx="1.5" fill="#E14A3F"/><rect x="11" y="6" width="2.5" height="15" fill="#EFD08C"/><ellipse cx="8.6" cy="5.4" rx="2.4" ry="2" fill="#EFD08C"/><ellipse cx="15.4" cy="5.4" rx="2.4" ry="2" fill="#EFD08C"/></svg>',
+'<svg viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="15" rx="1.5" fill="#BE854E"/><rect x="3" y="6" width="18" height="4.5" rx="1.5" fill="#D6A169"/><rect x="10.6" y="6" width="2.8" height="15" fill="#F5E7CE"/><rect x="3" y="13" width="18" height="2.6" fill="#F5E7CE"/></svg>',
+'<svg viewBox="0 0 24 24"><path d="M9 2h6v10c0 2 1.6 2.2 1.6 4.4 0 3.2-2.2 4.6-4.8 4.6S6.8 19.6 6.8 16.4c0-2.2 1.6-2.4 1.6-4.4V2z" fill="#C4312E"/><rect x="8" y="1.2" width="8" height="5.2" rx="2.6" fill="#FBF3E3"/><path d="M12 12.6l1.1 2.3 2.5.4-1.8 1.8.4 2.5-2.2-1.2-2.2 1.2.4-2.5-1.8-1.8 2.5-.4z" fill="#EFD08C" opacity=".85"/></svg>'
+];
+function drop(){
+ var r=R.getBoundingClientRect();
+ if(r.width<10||r.right<30||r.left>window.innerWidth-30)return;
+ var x=r.left+r.width*(0.08+Math.random()*0.34);
+ var y=r.top+r.height*0.78+Math.random()*14;
+ var s=document.createElement('span');
+ s.className='drop';
+ s.style.left=Math.round(x)+'px';
+ s.style.top=Math.round(y)+'px';
+ s.style.width=(20+Math.random()*14).toFixed(0)+'px';
+ s.style.setProperty('--sway',(Math.random()*46-23).toFixed(0)+'px');
+ s.style.setProperty('--rot',(Math.random()*80-40).toFixed(0)+'deg');
+ var dur=2.3+Math.random()*1.3;s.style.animationDuration=dur.toFixed(2)+'s';
+ s.innerHTML=ICON[Math.floor(Math.random()*ICON.length)];
+ G.appendChild(s);
+ s.addEventListener('animationend',function(){ if(s.parentNode)s.parentNode.removeChild(s); });setTimeout(function(){ if(s.parentNode)s.parentNode.removeChild(s); },dur*1000+400);
+}
+setInterval(drop,900);
+drop();
+})();
+</script></body>
 </html>
